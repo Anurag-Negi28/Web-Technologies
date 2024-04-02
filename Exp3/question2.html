@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Sticky Footer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .content-wrapper {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+    .content {
+      padding: 20px;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-wrapper">
+    <div class="content">
+      <h1>Simple Sticky Footer</h1>
+      <p>Main content goes here...</p>
+    </div>
+  </div>
+  <div class="footer">
+    This is the sticky footer.
+  </div>
+</body>
+</html>

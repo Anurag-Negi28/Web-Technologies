@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Responsive Design</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(241, 173, 173);
+      margin: 0px;
+      padding: 0px;
+    }
+
+    header {
+      background-color: rgb(51, 67, 71);
+      color: rgb(168, 205, 225);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: rgb(241, 173, 173);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: rgb(30, 27, 27);
+      padding: 10px;
+      margin: 5px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      transform: scale(1.2);
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: rgb(219, 238, 144);
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .sidebar {
+      background-color: rgb(179, 208, 245);
+      color: white;
+      padding: 10px;
+      width: 200px;
+      position: fixed;
+      top: 101px;
+      left: 0;
+      height: 100%;
+      overflow-y: auto;
+      display: inline-block;
+    }
+
+    main {
+      margin-left: 220px;
+    }
+
+    @media screen and (max-width: 600px) 
+    {
+      .sidebar
+      {
+        display: none;
+      }
+
+  body {
+    background-color: rgb(255, 255, 138);
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AgriEdu</h1>
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+      <div><a href="#">Home</a></div>
+      <div><a href="#">About</a></div>
+      <div><a href="#">Contact</a></div>
+    </nav>
+  </aside>
+
+  <main>
+    <section>
+      <h2>AgriEdu</h2>
+      <p>Introducing AgriEdu, an innovative platform revolutionizing agriculture education. AgriEdu is a comprehensive online hub designed to empower farmers, agronomists, and enthusiasts with the knowledge and skills necessary to thrive in modern agriculture. Through a user-friendly interface, learners gain access to a diverse array of courses covering everything from sustainable farming practices to precision agriculture techniques. Utilizing cutting-edge technologies such as virtual reality simulations and interactive modules, AgriEdu offers an immersive learning experience tailored to individuals at all levels of expertise. Whether one is a seasoned farmer looking to adopt the latest advancements or a newcomer eager to delve into the world of agriculture, AgriEdu provides the resources needed to succeed. Additionally, the platform fosters a vibrant community where users can connect, share insights, and collaborate on projects, fostering innovation and growth within the agricultural sector. With AgriEdu, the future of farming education is at your fingertips.</p>
+      <img width="300px" height="300px" src="example.jpg" alt="Example Image">
+    </section>
+  </main>
+  <footer>
+    <p>Copyright AgriEdu</p>
+  </footer>
+</body>
+</html>

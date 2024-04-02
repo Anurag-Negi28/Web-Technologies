@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="numbersDropdown"></select>
+
+<script>
+function populateDropdown(dropdownId, start, end) {
+    var select = document.getElementById(dropdownId);
+    for(var i = start; i <= end; i++) {
+        var option = document.createElement("option");
+        option.text = i;
+        option.value = i;
+        select.add(option);
+    }
+}
+
+populateDropdown("numbersDropdown", 1, 1000);
+</script>
+
+</body>
+</html>
