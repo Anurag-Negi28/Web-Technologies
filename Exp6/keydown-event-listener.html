@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter Key Detection</title>
+</head>
+<body>
+
+<label for="textInput">Type something and press Enter:</label>
+<input type="text" id="textInput">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Get the text input element
+var textInput = document.getElementById('textInput');
+
+// Add a keydown event listener 
+textInput.addEventListener('keydown', function(event) {
+// Check if the pressed key is Enter (key code 13)
+if (event.keyCode === 13) {
+    alert('Enter key pressed!');
+// You can perform any action here when Enter key is pressed
+}
+});
+});
+</script>
+
+</body>
+</html>

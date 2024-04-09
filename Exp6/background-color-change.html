@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Background Color</title>
+<style>
+#targetElement { width: 200px; height: 200px;
+background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<div id="targetElement"></div>
+<button id="changeColorButton">Change Color</button>
+
+<script>
+function changeColor() {
+// Get the target element
+var targetElement = document.getElementById('targetElement');
+
+// Change the background color to a random color
+var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+targetElement.style.backgroundColor = randomColor;
+}
+
+// Attach the changeColor function to the button click event
+var changeColorButton = document.getElementById('changeColorButton'); changeColorButton.addEventListener('click', changeColor);
+</script>
+
+</body>
+</html>

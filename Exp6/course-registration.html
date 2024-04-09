@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ef9191;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars due to video overflow */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+
+        /* Video container */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Video styling */
+        video#bgVideo {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+
+        /* Container for the form */
+        .registration-container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #7e7878;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+            opacity: 0.9;
+        }
+
+
+        /* Heading style */
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        /* Input fields */
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus {
+            border-color: #007bff;
+        }
+
+        /* Submit button */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="bgVideo" autoplay loop muted>
+            <source src="2062566-hd_1920_1080_24fps.mp4" type="video/mp4">
+            <!-- Add other video formats (webm, ogv) if needed -->
+        </video>
+    </div>
+    <div class="registration-container">
+        <h2>Course Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="courses">Select Courses:</label>
+            <select id="courses" name="courses" multiple required>
+                <option value="math">Math</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var courses = document.getElementById("courses");
+
+            // Simple validation for name
+            if (name.trim() === "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+
+            // Simple validation for email
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Invalid email address");
+                return false;
+            }
+
+            // Check if at least one course is selected
+            if (courses.selectedOptions.length === 0) {
+                alert("Select at least one course");
+                return false;
+            }
+
+            // Additional validation logic can be added as needed
+
+            // If all validations pass, the form is submitted
+            alert("Registration successful!");
+            return true;
+        }
+    </script>
+</body>
+</html>

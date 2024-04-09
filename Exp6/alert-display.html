@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dialog Boxes Demo</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin: 50px;
+}
+</style>
+</head>
+<body>
+
+<script>
+// Function to show an alert dialog
+function showAlert() {
+alert("This is an alert dialog!");
+}
+
+// Function to show a prompt dialog and display the entered value
+function showPrompt() {
+var userInput = prompt("Enter something:", "Default value"); if (userInput !== null) {
+alert("You entered: " + userInput);
+} else {
+alert("You pressed Cancel");
+}
+}
+
+// Function to show a confirm dialog and display the user's choice
+function showConfirm() {
+var userChoice = confirm("Do you want to proceed?"); if (userChoice) {
+alert("You clicked OK!");
+} else {
+alert("You clicked Cancel!");
+}
+}
+</script>
+
+<!-- Buttons to trigger the dialog boxes -->
+<button onclick="showAlert()">Show Alert</button>
+<button onclick="showPrompt()">Show Prompt</button>
+<button onclick="showConfirm()">Show Confirm</button>
+
+</body>
+</html>
